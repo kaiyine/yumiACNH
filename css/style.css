@@ -1,3 +1,9 @@
+header{
+  height: 20px;
+}
+body{
+  background: #dddddd;
+}
 .card{
   margin: 20px 0;
 }
