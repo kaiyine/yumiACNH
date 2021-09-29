@@ -1,15 +1,119 @@
-header{
-  height: 20px;
+header {
+  min-height: 20px;
 }
-body{
+
+body {
   background: #dddddd;
 }
-.card{
+
+.card {
   margin: 20px 0;
 }
-span{
+
+span {
   font-size: 1rem;
 }
+
 .swiper {
   width: 100%;
 }
+
+img {
+  max-width: 100%;
+}
+
+/* index */
+
+.map {
+  position: relative;
+  max-width: 700px;
+  margin: auto;
+}
+
+.map-img {
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.map-points {
+  position: absolute;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.point {
+  position: absolute;
+  display: inline-block;
+  min-width: 16px;
+  min-height: 16px;
+  background: #406d36;
+  width: auto;
+  height: auto;
+  border-radius: 50px;
+  border: 3px solid #fff;
+}
+
+.people {
+  background: transparent;
+  border: 0;
+}
+
+.point img {
+  display: block;
+  -webkit-filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.6));
+  filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.6));
+  transition: transform 0.3s;
+}
+
+.photo img{
+  display: none;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.black .modal-content{
+  background: #444;
+}
+/* points */
+#point_01 {top: 65%;left: 35%;z-index: 99;}
+#point_02 {top: 62%;left: 41%;}
+#point_03 {top: 62%;left: 75%;}
+#point_04 {top: 66%;left: 23%;}
+#point_05 {top: 64%;left: 81%;}
+#point_06 {top: 60%;left: 61%;}
+#point_07 {top: 53%;left: 73%;}
+#point_08 {top: 55%;left: 79%;}
+#point_09 {top: 51%;left: 60%;}
+#point_10 {top: 51%;left: 66%;}
+#point_11 {top: 62%;left: 15%;}
+#point_12 {top: 54%;left: 19%;}
+#point_13 {top: 73%;left: 55%;}
+#point_14 {top: 67%;left: 59%;}
+#point_15 {top: 61%;left: 52%;}
+#point_16 {top: 71%;left: 69%;}
+#point_17 {top: 79%;left: 70%;}
+#point_18 {top: 79%;left: 32%;}
+#point_19 {top: 43%;left: 68%;}
+#point_20 {top: 42%;left: 80%;}
+#point_21 {top: 31%;left: 77%;}
+#point_22 {top: 67%;left: 31%;}
+#point_23 {top: 57%;left: 43%;}
+#point_24 {top: 60%;left: 34%;}
+#point_25 {top: 52%;left: 33%;}
+#point_26 {top: 41%;left: 54%;}
+#point_27 {top: 32%;left: 62%;}
+#point_28 {top: 79%;left: 80%;}
+#point_29 {top: 32%;left: 27%;}
+#point_30 {top: 47%;left: 44%;}
+#point_31 {top: 36%;left: 40%;}
+#point_32 {top: 25%;left: 51%;}
+#point_33 {top: 25%;left: 37%;}
+#point_34 {top: 39%;left: 22%;}
+#point_35 {top: 25%;left: 63%;}
+#point_36 {top: 25%;left: 87%;}
+#point_37 {top: 80%;left: 19%;}
+#point_38 {top: 28%;left: 13%;}
+#point_39 {top: 50%;left: 52%;}
+#point_40 {top: 50%;left: 50%;}
