@@ -37,7 +37,7 @@
             <a data-bs-toggle="modal" href="#modal" id="point_10" class="point people"><img src="images/p_10.png" alt="芭芭拉"></a>
             <a data-bs-toggle="modal" href="#modal" id="point_11" class="point people"><img src="images/p_11.png" alt="彭花"></a>
             <a data-bs-toggle="modal" href="#modal" id="point_12" class="point people"><img src="images/p_12.png" alt="孟珮"></a>
-            <a data-bs-toggle="modal" href="#modal" id="point_13" class="point"></a>
+            <a data-bs-toggle="modal" href="#modal" id="point_13" class="point p2"></a>
             <a data-bs-toggle="modal" href="#modal" id="point_14" class="point"></a>
             <a data-bs-toggle="modal" href="#modal" id="point_15" class="point"></a>
             <a data-bs-toggle="modal" href="#modal" id="point_16" class="point p2"></a>
@@ -49,16 +49,16 @@
             <a data-bs-toggle="modal" href="#modal" id="point_22" class="point"></a>
             <a data-bs-toggle="modal" href="#modal" id="point_23" class="point"></a>
             <a data-bs-toggle="modal" href="#modal" id="point_24" class="point"></a>
-            <a data-bs-toggle="modal" href="#modal" id="point_25" class="point"></a>
+            <a data-bs-toggle="modal" href="#modal" id="point_25" class="point p2"></a>
             <a data-bs-toggle="modal" href="#modal" id="point_26" class="point p2"></a>
             <a data-bs-toggle="modal" href="#modal" id="point_27" class="point"></a>
             <a data-bs-toggle="modal" href="#modal" id="point_28" class="point"></a>
             <a data-bs-toggle="modal" href="#modal" id="point_29" class="point"></a>
             <a data-bs-toggle="modal" href="#modal" id="point_30" class="point"></a>
             <a data-bs-toggle="modal" href="#modal" id="point_31" class="point"></a>
-            <a data-bs-toggle="modal" href="#modal" id="point_32" class="point"></a>
+            <a data-bs-toggle="modal" href="#modal" id="point_32" class="point p2"></a>
             <a data-bs-toggle="modal" href="#modal" id="point_33" class="point p2"></a>
-            <a data-bs-toggle="modal" href="#modal" id="point_34" class="point"></a>
+            <a data-bs-toggle="modal" href="#modal" id="point_34" class="point p2"></a>
             <a data-bs-toggle="modal" href="#modal" id="point_35" class="point p2"></a>
             <a data-bs-toggle="modal" href="#modal" id="point_36" class="point p2"></a>
             <a data-bs-toggle="modal" href="#modal" id="point_37" class="point p2"></a>
@@ -87,6 +87,10 @@
 
   <script>
     $(document).ready(function () {
+      $('.point').each(function () {
+        $(this).append('<div class="imgTemp"><img src="images/' + $(this).attr('id') + '.jpg"></div>')
+      })
+      
       $(window).resize(function () {
         var mapWidth = $('#map2').width(),
           scale = mapWidth / 700;
@@ -94,28 +98,22 @@
         $('.people img').css('width', scale * 100 + '%');
       }).resize();
 
-      
-      $('a').click(function(){
+
+      $('a').click(function () {
         var PId = $(this).attr('id'),
-        img1 = $('.photo-img1'),
-        img2 = $('.photo-img2'),
-        img3 = $('.photo-img3');
+          img1 = $('.photo-img1'),
+          img2 = $('.photo-img2'),
+          img3 = $('.photo-img3');
 
         $('.photo img').hide();
 
-        if(PId == 'point_01' || PId == 'point_02'){
-          $('.photo-img1').attr('src','images/point_01a02.jpg').show();
-        }else if(PId == 'point_03' || PId == 'point_05'){
-          $('.photo-img1').attr('src','images/point_03a05.jpg').show();
-        }else if(PId == 'point_04' || PId == 'point_11'){
-          $('.photo-img1').attr('src','images/point_04a11.jpg').show();
-        }else if($(this).hasClass('p2')){
-          $('.photo-img1').attr('src','images/'+PId+'.jpg').show();
-          $('.photo-img2').attr('src','images/'+PId+'_2.jpg').show();
-        }else{
-          $('.photo-img1').attr('src','images/'+PId+'.jpg').show();
+        if ($(this).hasClass('p2')) {
+          $('.photo-img1').attr('src', 'images/' + PId + '.jpg').show();
+          $('.photo-img2').attr('src', 'images/' + PId + '_2.jpg').show();
+        } else {
+          $('.photo-img1').attr('src', 'images/' + PId + '.jpg').show();
         }
-        console.log($(this).attr('id'))
+        // console.log($(this).attr('id'))
       })
     })
   </script>

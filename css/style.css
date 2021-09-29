@@ -56,15 +56,25 @@ img {
   border: 3px solid #fff;
 }
 
-.people {
+.point:hover{
+  background: #ffeb4a;
+  border-color: #4d4b45;
+}
+
+.people, .people:hover {
   background: transparent;
   border: 0;
 }
 
-.point img {
+.point>img {
   display: block;
   -webkit-filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.6));
   filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.6));
+  transition: transform 0.3s;
+}
+
+.point:hover>img {
+  transform: scale(1.1);
   transition: transform 0.3s;
 }
 
@@ -73,9 +83,27 @@ img {
   width: 100%;
   margin-bottom: 10px;
 }
+
 .black .modal-content{
   background: #444;
 }
+
+.imgTemp{
+  display: none;
+  pointer-events: none;
+  position: absolute;
+  width: 200px;
+  padding: 6px;
+  border-radius: 6px;
+  background: #4d4a43;
+}
+@media (min-width:500px) {
+  .point:hover .imgTemp{
+    display: block;
+    z-index: 9999;
+  }
+}
+
 /* points */
 #point_01 {top: 65%;left: 35%;z-index: 99;}
 #point_02 {top: 62%;left: 41%;}
