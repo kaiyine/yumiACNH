@@ -91,15 +91,19 @@
       $('.point').each(function () {
         $(this).append('<div class="imgTemp"><img src="images/' + $(this).attr('id') + '.jpg"></div>')
       })
-
+      $('#map2').on('load',function(){
+        peopleImg();
+      });
       $(window).resize(function () {
+        peopleImg();
+      }).resize();
+
+      function peopleImg(){
         var mapWidth = $('#map2').width(),
           scale = mapWidth / 700;
         console.log(scale);
         $('.people img').css('width', scale * 100 + '%');
-      }).resize();
-
-
+      }
       $('a').click(function () {
         var PId = $(this).attr('id'),
           img1 = $('.photo-img1'),
