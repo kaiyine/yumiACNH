@@ -27,7 +27,7 @@
     <div class="row row-cols-lg-4 row-cols-md-3 row-cols-2">
       <div class="col"><a class="ss" data-bs-toggle="modal" href="#modal"><img src="images/point_13.jpg" class="swiper-images" alt="貓島入口"></a></div>
       <div class="col"><a class="ss" data-bs-toggle="modal" href="#modal"><img src="images/point_13_2.jpg" class="swiper-images" alt="貓島入口"></a></div>
-      <div class="col"><a class="ss" data-bs-toggle="modal" href="#modal"><img src="images/point_15.jpg" class="swiper-images" alt="服務處前"></a></div>
+      <div class="col"><a class="ss" data-bs-toggle="modal" href="#modal"><img src="images/point_15.jpg" class="swiper-images" alt="服務處廣場"></a></div>
       <div class="col"><a class="ss" data-bs-toggle="modal" href="#modal"><img src="images/point_14.jpg" class="swiper-images" alt="服務處前步道"></a></div>
       <div class="col"><a class="ss" data-bs-toggle="modal" href="#modal"><img src="images/point_23.jpg" class="swiper-images" alt="迷你市集"></a></div>
       <div class="col"><a class="ss" data-bs-toggle="modal" href="#modal"><img src="images/point_24.jpg" class="swiper-images" alt="Nook商店"></a></div>
@@ -85,7 +85,12 @@
           <p class="photo-title"></p>
         </div>
         <div class="modal-body">
-          <img class="photo-img" src="" alt="">
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <!-- <div class="swiper-slide"><img src="images/mydesign/images_050.jpg" class="card-img-top"></div> -->
+          </div>
         </div>
       </div>
     </div>
@@ -93,13 +98,45 @@
 
   <script>
     $(document).ready(function () {
-      $('.ss').click(function () {
-        var pSrc = $(this).children().attr('src'),
-        pTitle = $(this).children().attr('alt');
-        $('.photo-img').attr('src', pSrc);
-        $('.photo-title').html(pTitle);
-        // console.log($(this).attr('id'))
+      // $('.ss').click(function () {
+      //   var pSrc = $(this).children().attr('src'),
+      //   pTitle = $(this).children().attr('alt');
+      //   $('.photo-img').attr('src', pSrc);
+      //   $('.photo-title').html(pTitle);
+      //   // console.log($(this).attr('id'))
+      // })
+      var Imgs = [],
+      imgAlt = [],
+      i = 1;
+      $('.ss').each(function () {
+        Imgs.push($(this).children('img').attr('src'));
+        imgAlt.push($(this).children('img').attr('alt'));
+        $(this).attr('num', i);
+        i++;
       })
+
+      for (var i = 0; i < Imgs.length; i++) {
+        $('.swiper-wrapper').append('<div class="swiper-slide"><img src="' + Imgs[i] + '" class="img-fluid" alt="'+ imgAlt[i] +'"></a></div>')
+      }
+
+      const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        loop: true,
+      });
+
+      $('.ss').click(function () {
+        var modal = $('#modal'),
+        ariaLabelClick = $(this).attr('num'),
+        pTitle = $(this).children().attr('alt');
+        $('.photo-title').html(pTitle);
+        swiper.slideTo(ariaLabelClick);
+        modal.show();
+      });
+
+      swiper.on('slideChangeTransitionEnd', function () {
+        var ImgTitle = $('.swiper-slide-active .img-fluid').attr('alt');
+        $('.photo-title').html(ImgTitle);
+      });
     })
   </script>
 </body>
