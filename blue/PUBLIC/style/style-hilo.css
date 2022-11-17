@@ -1,0 +1,858 @@
+/* game */
+.game {
+  background: url(../images/bj.png) center 46% no-repeat;
+  background-size: cover;
+  padding-bottom: 60px;
+}
+
+.gm-btn {
+  width: 40px;
+  padding: 2px 1px;
+}
+
+/* game-main */
+.game-hilo {
+  position: relative;
+  margin: 10px 5px;
+}
+
+.hilo-main {
+  position: relative;
+  margin: 0 auto;
+  max-width: 460px;
+}
+
+.hilobg {
+  position: absolute;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.hb-l {
+  background: url(../images/Hi_al_l.png) right no-repeat;
+  background-size: 100% 100%;
+  width: 36%;
+  height: 100%;
+  flex-grow: 1;
+}
+
+.hb-r {
+  background: url(../images/Hi_al_r.png) left no-repeat;
+  background-size: 100% 100%;
+  width: 36%;
+  height: 100%;
+  flex-grow: 1;
+}
+
+.hb-c {
+  background: url(../images/Hi_al_c.png) repeat-x;
+  background-size: 100% 100%;
+  width: 30%;
+  height: 100%;
+  flex-grow: 1;
+}
+
+.hilo-box {
+  position: relative;
+  z-index: 5;
+  padding: 10px 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.hl-bl {
+  font-family: 'blue-font';
+  color: #fff;
+  text-align: center;
+  -webkit-text-stroke: .5px #000;
+  text-shadow: 0 1px #000;
+  margin-top: -20px;
+  margin-right: 5%;
+}
+
+.bl-up {
+  font-size: 40px;
+  padding: 10px 0;
+}
+
+.bl-dn {
+  font-size: 16px;
+}
+
+.hl-poker {
+  padding: 28px 5px 30px;
+  width: 40%;
+}
+
+.pkimg {
+  position: relative;
+}
+
+.pk-bk {
+  position: absolute;
+  height: 110px;
+  right: 0;
+}
+
+.pk-op {
+  position: relative;
+  z-index: 5;
+  height: 110px;
+}
+
+.hlm-btn {
+  background: url(../images/Hi_al_anh.png) center no-repeat;
+  background-size: 100% 100%;
+  padding: 9px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #2b728f;
+  font-size: 12px;
+  font-weight: bold;
+  margin: 0 auto;
+}
+
+.hlmb-ac {
+  background: url(../images/Hi_al_h.png) center no-repeat;
+  background-size: 100% 100%;
+}
+
+.hlmb-ac img {
+  height: 20px;
+  margin-right: 5px;
+}
+
+/* bet-menu */
+.bet-menu {
+  background: url(../images/bet/ty_db.png) top center no-repeat;
+  background-size: 100% 100%;
+  margin-top: -60px;
+  padding: 24px 12px 8px;
+  color: #fff;
+}
+
+.bm-menu {
+  background: #f8fdfe;
+  border-radius: 20px;
+  padding-bottom: 6px;
+}
+
+.btn-c {
+  background: url(../images/bet/btn_c.png) center no-repeat;
+  background-size: 100% 100%;
+  font-family: 'blue-font';
+  color: #fff;
+  width: 44px;
+  height: 44px;
+  line-height: 44px;
+}
+
+.bm-l-all {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.bm-l-pc {
+  padding: 15px 0 7px 7px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.bm-l {
+  padding: 15px 10px 7px;
+  flex-grow: 1;
+}
+
+.ba {
+  background: #657682;
+  border-radius: 10px;
+  box-shadow: inset 0 0 7px rgb(0 0 0 / 50%);
+  padding: 5px 15px;
+  text-align: center;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ba-m {
+  font-family: 'blue-font';
+  text-shadow: 1px 1px 0 #000;
+  font-size: 18px;
+  padding: 0 0 10px;
+  color: #fff;
+  background: transparent;
+  box-shadow: none;
+  border: 0;
+  text-align: center;
+}
+
+.ba-m:focus,
+.ba-m:visited,
+.ba-m:active {
+  border: 0;
+  outline: 0;
+}
+
+.ba-text {
+  color: #a2a8a9;
+  border-top: 1px solid #a2a8a9;
+  font-size: 16px;
+  padding-top: 10px;
+}
+
+.bm-c {
+  padding: 15px 7px 7px 0;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hilo-btns-pc {
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: center;
+  padding: 10px 0 2px;
+}
+
+.bm-r {
+  position: relative;
+  min-width: 130px;
+  padding: 12px 10px 4px;
+}
+
+.bet-btn {
+  background: url(../images/bet/bet.png) center no-repeat;
+  background-size: 100%;
+  font-family: 'blue-font';
+  -webkit-text-stroke: .5px #000;
+  text-shadow: 0 1px #000;
+  color: #fff;
+  font-size: 20px;
+  width: 100%;
+  height: 100%;
+  min-width: 40px;
+  max-width: 100px;
+  margin: 0 auto;
+  display: block;
+  letter-spacing: -1px;
+}
+
+.bb-pink {
+  background: url(../images/bet/bet-pink.png) center no-repeat;
+  background-size: 100% 100%;
+}
+
+.bb-gray {
+  background: url(../images/bet/bet-gray.png) center no-repeat;
+  background-size: 100% 100%;
+}
+
+.hilo-btn {
+  width: 50%;
+  padding: 11px 10px;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 14px;
+}
+
+.hb-blue {
+  background: url(../images/bet/Hi_al_lan.png) center no-repeat;
+  background-size: 100% 100%;
+  color: #017c97;
+}
+
+.hb-red {
+  background: url(../images/bet/Hi_al_hong.png) center no-repeat;
+  background-size: 100% 100%;
+  color: #b42d1f;
+}
+
+.hb-t {
+  font-size: 22px;
+}
+
+.hilo-pr {
+  border: 2px dashed #8c97cb;
+  border-radius: 18px;
+  margin: 5px 8px;
+  padding: 0 8px 5px;
+}
+
+.hp-title {
+  color: #1f99b4;
+  padding-left: 8px;
+  padding-bottom: 5px;
+  font-size: 14px;
+}
+
+.hilo-poker {
+  position: relative;
+}
+
+.hilo-poker img {
+  height: 72px;
+  display: block;
+}
+
+.hilo-mark {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+}
+
+.hm-xh {
+  background: #000 url(../images/bet/Hi_icon_xh.png) center no-repeat;
+  background-size: cover;
+}
+
+.hm-shang {
+  background: #000 url(../images/bet/Hi_icon_shang.png) center no-repeat;
+  background-size: cover;
+}
+
+.hm-xia {
+  background: #000 url(../images/bet/Hi_icon_xia.png) center no-repeat;
+  background-size: cover;
+}
+
+.hm-dy {
+  background: #000 url(../images/bet/Hi_icon_dy.png) center no-repeat;
+  background-size: cover;
+}
+
+/* bet-table */
+.bet-table {
+  display: table;
+  width: 100%;
+  border-radius: 0 0 15px 15px;
+  overflow: hidden;
+  background: #24a5c1;
+  padding: 0 0 5px;
+}
+
+.bt-title {
+  background: url(../images/table/tiao.png) repeat-x;
+  background-size: auto 100%;
+  display: table-header-group;
+  font-family: 'blue-font';
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 0 #0e416a;
+  color: #fff;
+}
+
+.btt-th {
+  display: table-cell;
+  padding: 10px 15px;
+}
+
+.bt-row {
+  display: table-row-group;
+  font-family: 'blue-font';
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 0 #0e416a;
+  color: #fff;
+}
+
+.btt-td {
+  display: table-cell;
+  padding: 7px 15px;
+  vertical-align: middle;
+}
+
+.text-green {
+  color: #74ff00;
+}
+
+.text-red {
+  color: #ff0f23;
+}
+
+@media (min-width:540px) {
+
+  /* game-main */
+  .hilo-box {
+    height: 300px;
+  }
+
+  .bl-up {
+    font-size: 50px;
+  }
+
+  .bl-dn {
+    font-size: 20px;
+  }
+
+  .pk-bk, .pk-op {
+    height: 130px;
+  }
+}
+
+@media (min-width:769px) {
+  .contant {
+    max-width: 1024px;
+    margin: 20px auto;
+    width: 100%;
+  }
+
+  .blue-bg-pc {
+    background:
+      url(../images/blue-bg-pc/blue_bg_lb.png) left bottom no-repeat,
+      url(../images/blue-bg-pc/blue_bg_lt.png) left top no-repeat,
+      url(../images/blue-bg-pc/blue_bg_rt.png) right top no-repeat,
+      url(../images/blue-bg-pc/blue_bg_rb.png) right bottom no-repeat,
+      url(../images/blue-bg-pc/blue_bg_t.png) center top repeat-x,
+      url(../images/blue-bg-pc/blue_bg_l.png) left center repeat-y,
+      url(../images/blue-bg-pc/blue_bg_r.png) right center repeat-y,
+      url(../images/blue-bg-pc/blue_bg_b.png) center bottom repeat-x,
+      #2DC6D9;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.35);
+    border-radius: 21px;
+    padding: 20px;
+  }
+
+  .blue-bg-inner-pc {
+    background: #E3FDFB;
+    border-radius: 15px;
+    padding: 3px 10px;
+  }
+
+  /* game */
+  .pc-game-box {
+    display: flex;
+    margin-bottom: 10px;
+  }
+
+  .bet-game {
+    flex-grow: 1;
+  }
+
+  .game {
+    border-radius: 15px 15px 0 0;
+    padding-bottom: 0;
+    margin-bottom: 20px;
+  }
+
+  .game-menu {
+    padding: 12px 20px;
+  }
+
+  .gm-btn {
+    width: 47px;
+  }
+
+  /* game-main */
+  .game-hilo {
+    margin: 0;
+    padding: 0 20px 10px;
+  }
+
+  .hilo-main {
+    max-width: 500px;
+    height: 300px;
+    margin-bottom: 10px;
+  }
+
+  .hb-l {
+    width: 33%;
+  }
+
+  .hb-r {
+    width: 33%;
+  }
+
+  .hb-c {
+    width: 35%;
+  }
+
+  .hl-bl {
+    text-shadow: 1px 2px #000;
+  }
+
+  .bl-up {
+    font-size: 64px;
+  }
+
+  .bl-dn {
+    font-size: 24px;
+  }
+
+  .pk-bk, .pk-op {
+    height: 150px;
+  }
+
+  .hlmb-ac {
+    font-size: 16px;
+  }
+
+  /* bet-menu */
+  .bet-menu {
+    margin: 0;
+    background: transparent;
+    padding: 0;
+  }
+
+  .bm-r {
+    padding: 12px 0 4px;
+    min-width: 100px;
+  }
+
+  .bm-menu {
+    padding: 0 8px 8px;
+  }
+
+  .bm-l-pc {
+    padding: 15px 0 7px 0;
+  }
+
+  .bm-c {
+    padding-right: 2px;
+  }
+
+  .ba {
+    padding: 10px;
+  }
+
+  .hilo-btns-pc {
+    min-width: 140px;
+  }
+
+  .hilo-btn {
+    width: 100%;
+    height: 50%;
+  }
+
+  .hilo-pr {
+    margin: 10px 0;
+  }
+
+  .hp-title {
+    padding: 5px;
+  }
+
+  /* bet-table */
+  .bet-tabs {
+    position: relative;
+    width: 100%;
+    padding-bottom: 7px;
+    margin-top: -6px;
+    margin-bottom: 8px;
+  }
+
+  .bet-tab-bar {
+    position: absolute;
+    width: 80px;
+    height: 4px;
+    background: #fff;
+    border-radius: 10px;
+    left: 19px;
+    bottom: 0;
+  }
+
+  .bet-tab-btn {
+    color: #585858;
+    padding: 0 20px;
+    line-height: 30px;
+    transition: all .3s;
+    cursor: pointer;
+  }
+
+  .bet-tab-btn.active {
+    color: #fff;
+    font-size: 20px;
+  }
+
+  .bet-tab-btn:hover {
+    color: #fff;
+    font-size: 20px;
+  }
+
+  .bet-table {
+    background: transparent;
+  }
+
+  .bt-title, .bt-row {
+    background: transparent;
+    font-family: Microsoft YaHei, 'PingFangSC-Regular';
+    text-shadow: none;
+    color: #657682;
+  }
+
+  .btt-th {
+    border-bottom: 1px solid;
+  }
+
+  .text-green {
+    color: #00c228;
+  }
+
+  .hilo-details {
+    align-items: center;
+  }
+
+  .hilo-details .hilo-poker img {
+    height: 60px;
+  }
+
+  .hilo-details .hilo-mark {
+    width: 18px;
+    height: 18px;
+    top: 4px;
+    right: 4px;
+  }
+
+  /* side-menu */
+  .pc-side-menu {
+    max-width: 230px;
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .side-user {
+    background: url(../images/side-user-bg.png) top center no-repeat;
+    background-size: cover;
+    padding: 46px 12px 15px;
+    margin-bottom: 30px;
+  }
+
+  .side-user .user-n {
+    border: 0;
+    width: 100%;
+    padding: 0;
+    padding-bottom: 12px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    color: #d48986;
+  }
+
+  .side-user .user-w {
+    width: 100%;
+    color: #585858;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+  }
+
+  .side-user .user-img {
+    height: 44px;
+    margin-right: 15px;
+  }
+
+  .side-user .user-w span {
+    text-decoration: none;
+  }
+
+  .side-user .currency {
+    font-size: 13px;
+    margin-left: 6px;
+  }
+
+  .side-seed {
+    padding: 10px 9px;
+    flex-grow: 1;
+  }
+
+  .ss-title {
+    position: relative;
+  }
+
+  .st-text {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    top: 4px;
+    left: -1px;
+  }
+
+  .ss-title img {
+    position: absolute;
+    top: -35px;
+    left: -18px;
+  }
+
+  .ss-tabs {
+    position: relative;
+    align-items: center;
+    margin-top: 8px;
+  }
+
+  .st-active-bar {
+    position: absolute;
+    bottom: 4px;
+    width: 58px;
+    height: 2px;
+    left: 13px;
+    background: #585858;
+  }
+
+  .st-item {
+    color: #718593;
+    padding: 10px 0;
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .st-item.active {
+    font-size: 16px;
+    margin-right: 20px;
+    color: #585858;
+  }
+
+  .ss-label {
+    color: #585858;
+    font-size: 14px;
+    padding: 15px 0 10px;
+    display: flex;
+    align-items: center;
+  }
+
+  .ss-value {
+    background: #fff0c6;
+    border-radius: 8px;
+    box-shadow: inset 0 0 5px 1px rgb(0 0 0 / 15%);
+    padding: 0 10px;
+    margin-bottom: 7px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+  }
+
+  .ss-value span {
+    color: #77b1c7;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 88%;
+    font-size: 12px;
+  }
+
+  .ss-copy-btn {
+    padding: 0;
+  }
+
+  .ss-copy-btn img {
+    width: 15px;
+    vertical-align: middle;
+  }
+
+  .ss-update-btn {
+    padding-left: 5px;
+  }
+
+  .ss-update-btn img {
+    width: 20px;
+    vertical-align: middle;
+  }
+
+  .d-flex .ss-value {
+    width: 49%;
+  }
+
+  .ss-v-btn {
+    background: #2dc6d9;
+    box-shadow: inset 0 -3px 7px rgb(0 0 0 / 20%);
+    width: 49%;
+    margin-left: 2%;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+  }
+
+  .ss-v-btn:hover {
+    background: #39cfdd;
+  }
+}
+
+@media (min-width: 1023px) {
+  /* game-main */
+  .hilo-main {
+    height: 380px;
+    max-width: 640px;
+  }
+
+  .hilo-box {
+    height: 380px;
+  }
+
+  .bl-up {
+    font-size: 72px;
+  }
+
+  .bl-dn {
+    font-size: 30px;
+  }
+
+  .pk-bk, .pk-op {
+    height: 190px;
+  }
+
+  .hlm-btn {
+    font-size: 18px;
+    padding: 12px 24px;
+  }
+
+  .hlmb-ac img {
+    height: 24px;
+  }
+
+  /* bet-menu */
+  .bm-menu {
+    padding: 0 40px 10px;
+  }
+
+  .bm-up {
+    gap: 5px;
+  }
+
+  .hilo-btns-pc {
+    min-width: 190px;
+  }
+
+  .hp-title {
+    font-size: 20px;
+  }
+
+  .hilo-poker img {
+    height: 100px;
+  }
+
+  .hilo-mark {
+    width: 22px;
+    height: 22px;
+    top: 8px;
+    right: 8px;
+  }
+}
+
+@media (max-width:768px) {
+  .hide-in-m {
+    display: none;
+  }
+
+  .bm-up, .bm-m {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .bm-r::before {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 70%;
+    border-left: 2px dashed #657682;
+    top: 52%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+}

@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style/style-hilo.css">
+  <link rel="stylesheet" href="style/style.css">
+  <title>Blue-Win</title>
+</head>
+
+<body>
+  <header class="d-flex">
+    <button class="menu"><img src="images/header/menu.png"></button>
+    <div class="game-title">Hilo</div>
+    <div class="logo t-c"><img class="logo-img" src="images/header/logo.svg"></div>
+    <div class="user-pc d-flex hide-in-m">
+      <div class="user-info user-n"><img class="user-img" src="images/header/avater.png"><span class="user-color">Guest</span></div>
+      <div class="user-info user-w"><img class="user-img" src="images/header/wallet.png"><span class="user-color">wallet</span></div>
+      <div class="user-info user-b"><img class="user-img" src="images/header/balance.png"><span class="user-line">2000.1234 CNY</span></div>
+    </div>
+    <button class="s-lang"><img src="images/header/en-us.svg"></button>
+  </header>
+  <div class="contant">
+    <div class="main">
+      <div class="user-m d-flex hide-in-pc">
+        <div class="user-info user-n t-r"><img class="user-img" src="images/header/avater.png"><span class="user-color">Guest</span></div>
+        <div class="user-info user-w"><img class="user-img" src="images/header/wallet.png"><span class="user-color">wallet</span></div>
+        <div class="user-info user-b"><img class="user-img" src="images/header/balance.png"><span class="user-line">2000.1234 CNY</span></div>
+      </div>
+      <div class="pc-game-box blue-bg-pc">
+        <div class="bet-game">
+          <div class="game">
+            <div class="game-menu d-flex">
+              <button class="gm-btn hide-in-pc"><img src="images/game-menu/al_zz.svg"></button>
+              <button class="gm-btn"><img src="images/game-menu/al_qxsc.svg"></button>
+              <button class="gm-btn"><img src="images/game-menu/al_sy.svg"></button>
+              <button class="gm-btn"><img src="images/game-menu/al_tp.svg"></button>
+              <button class="gm-btn"><img src="images/game-menu/ty_gz.svg"></button>
+              <button class="gm-btn hide-in-pc"><img src="images/game-menu/al_zjjl.svg"></button>
+              <button class="gm-btn"><img src="images/game-menu/al_qb.svg"></button>
+            </div>
+            <div class="game-hilo game-b">
+              <div class="hilo-main">
+                <div class="hilobg d-flex">
+                  <div class="hb-l"></div>
+                  <div class="hb-c"></div>
+                  <div class="hb-r"></div>
+                </div>
+                <div class="hilo-box d-flex">
+                  <div class="hl-bl">
+                    <div class="bl-up">1X</div>
+                    <div class="bl-dn">Coefficient</div>
+                  </div>
+                  <div class="hl-poker">
+                    <div class="pkimg">
+                      <img class="pk-bk" src="images/poker/Hi_zp_kb.png">
+                      <img class="pk-op" src="images/poker/Hi_zp_hk.png">
+                    </div>
+                    <button class="hlm-btn hlmb-ac"><img src="images/Hi_icon_lxh.png">SKIP(20)</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-----------------------------
+                        winning 
+            ------------------------------->
+            <div class="winning">
+              <div class="winbg"><img src="images/winning/winbg.png"></div>
+              <div class="win-info">
+                  <img class="win-img" src="images/winning/5_35.png">
+                  <div class="win-text">12345678</div>
+              </div>
+            </div>
+            <!-----------------------------
+                        winning 
+            ------------------------------->
+          </div>
+          <div class="bet-menu">
+            <div class="bm-menu blue-bg-inner-pc">
+              <div class="d-flex bm-up">
+                <div class="bm-l-all">
+                  <div class="bm-l-pc d-flex hide-in-m">
+                    <button class="btn-c">Min</button>
+                    <button class="btn-c">Max</button>
+                  </div>
+                  <div class="bm-l">
+                    <div class="ba">
+                      <input inputmode="decimal" class="ba-m" value="12345678" size="1">
+                      <div class="ba-text">BET AMOUNT</div>
+                    </div>
+                  </div>
+                  <div class="bm-c d-flex">
+                    <button class="btn-c">1/2</button>
+                    <button class="btn-c">2X</button>
+                  </div>
+                </div>
+                <div class="hilo-btns-pc d-flex hide-in-m">
+                  <button class="d-flex hilo-btn hb-blue">
+                    <div class="hb-t">≥</div>
+                    <div class="hb-p">23.07%</div>
+                    <div class="hb-x">4.2466x</div>
+                  </button>
+                  <button class="d-flex hilo-btn hb-red">
+                    <div class="hb-t">≤</div>
+                    <div class="hb-p">23.07%</div>
+                    <div class="hb-x">4.2466x</div>
+                  </button>
+                </div>
+                <div class="bm-r">
+                  <button class="bet-btn">
+                    <div class="bb-txt">BET</div>
+                  </button>
+                </div>
+              </div>
+              <div class="d-flex hide-in-pc bm-m">
+                <button class="d-flex hilo-btn hb-blue">
+                  <div class="hb-t">≥</div>
+                  <div class="hb-p">23.07%</div>
+                  <div class="hb-x">4.2466x</div>
+                </button>
+                <button class="d-flex hilo-btn hb-red">
+                  <div class="hb-t">≤</div>
+                  <div class="hb-p">23.07%</div>
+                  <div class="hb-x">4.2466x</div>
+                </button>
+              </div>
+              <div class="hilo-pr">
+                <div class="hp-title">Previous Rolls</div>
+                <div class="d-flex">
+                  <div class="hilo-poker">
+                    <img src="images/poker/Hi_zp_m4.png">
+                    <div class="hilo-mark hm-xh"></div>
+                  </div>
+                  <div class="hilo-poker">
+                    <img src="images/poker/Hi_zp_f9.png">
+                    <div class="hilo-mark hm-xia"></div>
+                  </div>
+                  <div class="hilo-poker">
+                    <img src="images/poker/Hi_zp_ht2.png">
+                    <div class="hilo-mark hm-shang"></div>
+                  </div>
+                  <div class="hilo-poker">
+                    <img src="images/poker/Hi_zp_h7.png">
+                    <div class="hilo-mark hm-dy"></div>
+                  </div>
+                  <div class="hilo-poker">
+                    <img src="images/poker/Hi_zp_htA.png">
+                    <div class="hilo-mark hm-shang"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pc-side-menu hide-in-m">
+          <div class="side-user blue-bg-inner-pc">
+            <div class="user-n"><img class="user-img" src="images/header/avater.png"><span>Guest</span></div>
+            <div class="user-w"><img class="user-img" src="images/header/wallet.png"><span>2000.00</span><span class="currency">BTC</span></div>
+          </div>
+          <div class="side-seed blue-bg-inner-pc">
+            <div class="ss-title"><img src="images/seed.png"><div class="st-text">SEED</div></div>
+            <div class="ss-tabs d-flex">
+              <div class="st-active-bar"></div>
+              <div class="st-item active">NEXT ISSUE</div>
+              <div class="st-item">PREVIOUS ISSUE</div>
+            </div>
+            <!-- NEXT ISSUE -->
+            <div class="ss-contant">
+              <div class="ss-label">Server Seed</div>
+              <div class="ss-value"><span>--</span></div>
+              <div class="ss-label">Server Seed Hash</div>
+              <div class="ss-value">
+                <span>172ee7cdef88c68970a0f8a4f3d1ad4daaa0782b00d12342f6090bb0d3affdbe</span>
+                <button class="ss-copy-btn"><img src="images/copy.png"></button>
+              </div>
+              <div class="ss-label">Client Seed<button class="ss-update-btn"><img src="images/update-seed-side.svg"></button></div>
+              <div class="ss-value">
+                <span>7330d19096efa44a52e90852ad648147</span>
+                <button class="ss-copy-btn"><img src="images/copy.png"></button>
+              </div>
+              <div class="ss-label">Nonce</div>
+              <div class="ss-value"><span>1801</span></div>
+            </div>
+            <!-- PREVIOUS ISSUE -->
+            <div class="ss-contant" style="display: none;">
+              <div class="ss-label">Server Seed</div>
+              <div class="ss-value"><span>--</span></div>
+              <div class="ss-label">Server Seed Hash</div>
+              <div class="ss-value">
+                <span>--</span>
+              </div>
+              <div class="ss-label">Client Seed</div>
+              <div class="ss-value">
+                <span>--</span>
+              </div>
+              <div class="ss-label">Nonce</div>
+              <div class="d-flex">
+                <div class="ss-value"><span>1801</span></div>
+                <button class="ss-v-btn">Validate</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="blue-bg-pc">
+        <div class="d-flex hide-in-m bet-tabs">
+          <div class="bet-tab-bar"></div>
+          <div class="bet-tab-btn active">My Bets</div>
+          <div class="bet-tab-btn ">Draw History</div>
+          <div class="bet-tab-btn ">All Bets</div>
+        </div>
+        <div class="blue-bg-inner-pc">
+          <div class="bet-table">
+            <div class="bt-title">
+              <div class="btt-th">Period</div>
+              <div class="btt-th t-c hide-in-m">Details</div>
+              <div class="btt-th t-r">Bet</div>
+              <div class="btt-th t-r">Payout</div>
+              <div class="btt-th t-c hide-in-m">Status</div>
+            </div>
+            <div class="bt-row">
+              <div class="btt-td">104538</div>
+              <div class="btt-td t-c hide-in-m">
+                <div class="hilo-details d-flex">
+                  <div class="hilo-poker">
+                    <img src="images/poker/Hi_zp_m4.png">
+                    <div class="hilo-mark hm-xh"></div>
+                  </div>
+                  <div class="hilo-poker">
+                    <img src="images/poker/Hi_zp_f9.png">
+                    <div class="hilo-mark hm-xia"></div>
+                  </div>
+                  <div class="hilo-poker">
+                    <img src="images/poker/Hi_zp_ht2.png">
+                    <div class="hilo-mark hm-shang"></div>
+                  </div>
+                  <div class="hilo-poker">
+                    <img src="images/poker/Hi_zp_h7.png">
+                    <div class="hilo-mark hm-dy"></div>
+                  </div>
+                  <div class="hilo-poker">
+                    <img src="images/poker/Hi_zp_htA.png">
+                    <div class="hilo-mark hm-shang"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="btt-td t-r">1</div>
+              <div class="btt-td t-r">1.274</div>
+              <div class="btt-td t-c hide-in-m text-green">Win</div>
+            </div>
+            <div class="bt-row">
+              <div class="btt-td">104538</div>
+              <div class="btt-td t-c hide-in-m">
+                <div class="hilo-details d-flex">
+                  <div class="hilo-poker">
+                    <img src="images/poker/Hi_zp_m4.png">
+                    <div class="hilo-mark hm-xh"></div>
+                  </div>
+                  <div class="hilo-poker">
+                    <img src="images/poker/Hi_zp_f9.png">
+                    <div class="hilo-mark hm-xia"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="btt-td t-r">1</div>
+              <div class="btt-td t-r">0</div>
+              <div class="btt-td t-c hide-in-m text-red">Lose</div>
+            </div>
+            <div class="bt-row">
+              <div class="btt-td">104538</div>
+              <div class="btt-td t-c hide-in-m">
+                <div class="hilo-details d-flex">
+                  <div class="hilo-poker">
+                    <img src="images/poker/Hi_zp_m4.png">
+                    <div class="hilo-mark hm-xh"></div>
+                  </div>
+                  <div class="hilo-poker">
+                    <img src="images/poker/Hi_zp_f9.png">
+                    <div class="hilo-mark hm-xia"></div>
+                  </div>
+                  <div class="hilo-poker">
+                    <img src="images/poker/Hi_zp_ht2.png">
+                    <div class="hilo-mark hm-shang"></div>
+                  </div>
+                  <div class="hilo-poker">
+                    <img src="images/poker/Hi_zp_h7.png">
+                    <div class="hilo-mark hm-dy"></div>
+                  </div>
+                  <div class="hilo-poker">
+                    <img src="images/poker/Hi_zp_htA.png">
+                    <div class="hilo-mark hm-shang"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="btt-td t-r">1</div>
+              <div class="btt-td t-r">1.274</div>
+              <div class="btt-td t-c hide-in-m text-green">Win</div>
+            </div>
+            <div class="bt-row">
+              <div class="btt-td">104538</div>
+              <div class="btt-td t-c hide-in-m">
+                <div class="hilo-details d-flex">
+                  <div class="hilo-poker">
+                    <img src="images/poker/Hi_zp_m4.png">
+                    <div class="hilo-mark hm-xh"></div>
+                  </div>
+                  <div class="hilo-poker">
+                    <img src="images/poker/Hi_zp_f9.png">
+                    <div class="hilo-mark hm-xia"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="btt-td t-r">1</div>
+              <div class="btt-td t-r">0</div>
+              <div class="btt-td t-c hide-in-m text-red">Lose</div>
+            </div>
+            <div class="bt-row">
+              <div class="btt-td">104538</div>
+              <div class="btt-td t-c hide-in-m">
+                <div class="hilo-details d-flex">
+                  <div class="hilo-poker">
+                    <img src="images/poker/Hi_zp_m4.png">
+                    <div class="hilo-mark hm-xh"></div>
+                  </div>
+                  <div class="hilo-poker">
+                    <img src="images/poker/Hi_zp_f9.png">
+                    <div class="hilo-mark hm-xia"></div>
+                  </div>
+                  <div class="hilo-poker">
+                    <img src="images/poker/Hi_zp_ht2.png">
+                    <div class="hilo-mark hm-shang"></div>
+                  </div>
+                  <div class="hilo-poker">
+                    <img src="images/poker/Hi_zp_h7.png">
+                    <div class="hilo-mark hm-dy"></div>
+                  </div>
+                  <div class="hilo-poker">
+                    <img src="images/poker/Hi_zp_htA.png">
+                    <div class="hilo-mark hm-shang"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="btt-td t-r">1</div>
+              <div class="btt-td t-r">1.274</div>
+              <div class="btt-td t-c hide-in-m text-green">Win</div>
+            </div>
+            <div class="bt-row">
+              <div class="btt-td">104538</div>
+              <div class="btt-td t-c hide-in-m">
+                <div class="hilo-details d-flex">
+                  <div class="hilo-poker">
+                    <img src="images/poker/Hi_zp_m4.png">
+                    <div class="hilo-mark hm-xh"></div>
+                  </div>
+                  <div class="hilo-poker">
+                    <img src="images/poker/Hi_zp_f9.png">
+                    <div class="hilo-mark hm-xia"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="btt-td t-r">1</div>
+              <div class="btt-td t-r">0</div>
+              <div class="btt-td t-c hide-in-m text-red">Lose</div>
+            </div>
+            <div class="bt-row">
+              <div class="btt-td">104538</div>
+              <div class="btt-td t-c hide-in-m">
+                <div class="hilo-details d-flex">
+                  <div class="hilo-poker">
+                    <img src="images/poker/Hi_zp_m4.png">
+                    <div class="hilo-mark hm-xh"></div>
+                  </div>
+                  <div class="hilo-poker">
+                    <img src="images/poker/Hi_zp_f9.png">
+                    <div class="hilo-mark hm-xia"></div>
+                  </div>
+                  <div class="hilo-poker">
+                    <img src="images/poker/Hi_zp_ht2.png">
+                    <div class="hilo-mark hm-shang"></div>
+                  </div>
+                  <div class="hilo-poker">
+                    <img src="images/poker/Hi_zp_h7.png">
+                    <div class="hilo-mark hm-dy"></div>
+                  </div>
+                  <div class="hilo-poker">
+                    <img src="images/poker/Hi_zp_htA.png">
+                    <div class="hilo-mark hm-shang"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="btt-td t-r">1</div>
+              <div class="btt-td t-r">1.274</div>
+              <div class="btt-td t-c hide-in-m text-green">Win</div>
+            </div>
+            <div class="bt-row">
+              <div class="btt-td">104538</div>
+              <div class="btt-td t-c hide-in-m">
+                <div class="hilo-details d-flex">
+                  <div class="hilo-poker">
+                    <img src="images/poker/Hi_zp_m4.png">
+                    <div class="hilo-mark hm-xh"></div>
+                  </div>
+                  <div class="hilo-poker">
+                    <img src="images/poker/Hi_zp_f9.png">
+                    <div class="hilo-mark hm-xia"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="btt-td t-r">1</div>
+              <div class="btt-td t-r">0</div>
+              <div class="btt-td t-c hide-in-m text-red">Lose</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

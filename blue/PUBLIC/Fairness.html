@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/style-hilo.css">
+  <title>Blue-Fairness</title>
+</head>
+
+<body>
+  <header class="d-flex">
+    <button class="menu"><img src="images/header/menu.png"></button>
+    <div class="game-title">Hilo</div>
+    <div class="logo t-c"><img class="logo-img" src="images/header/logo.svg"></div>
+    <button class="s-lang"><img src="images/header/en-us.svg"></button>
+  </header>
+  <!-- Fairness -->
+  <div class="pop pop-fairness">
+    <div class="pop-win">
+      <button class="pop-close"><img src="images/pop/ty_gb.png"></button>
+      <div class="pop-main">
+        <div class="pop-title"><img class="fair-icon" src="images/pop/ty_icon.png">FAIRNESS</div>
+        <div class="pop-contant">
+          <div class="fair-switch d-flex">
+            <div class="fs-ctrl"><img src="images/pop/ty_al.png"></div>
+            <button class="fs-v">Desc</button>
+            <button class="fs-v active">Seed</button>
+            <button class="fs-v">Validate</button>
+          </div>
+          <!-- Desc -->
+          <div class="fair-contant fc-desc" style="display: none;">
+            <div class="fc-s-game d-flex">
+              <div class="fcg-title">Games</div>
+              <div class="fc-dropdown">
+                <div class="fcd-select d-flex">Crash<img src="images/pop/down.png"></div>
+                <div class="fcd-box">
+                  <div class="fcd-item active">Crash</div>
+                  <div class="fcd-item">Double</div>
+                  <div class="fcd-item">Dice</div>
+                  <div class="fcd-item">Keno</div>
+                  <div class="fcd-item">Limbo</div>
+                  <div class="fcd-item">Plinko</div>
+                  <div class="fcd-item">Mine</div>
+                  <div class="fcd-item">Crypto</div>
+                  <div class="fcd-item">Triple</div>
+                  <div class="fcd-item">Hilo</div>
+                  <div class="fcd-item">Coin</div>
+                  <div class="fcd-item">Tower</div>
+                </div>
+              </div>
+            </div>
+            <p class="fc-text">Crash is a multiplayer game which uses a sha256 chain in combination widiv a undetermined client seed to fairly generate rounds.</p>
+            <h4 class="fc-title">Generating a chain</h4>
+            <p class="fc-text">To generate dive chain, we begin widiv securely randomized bytes. From divere, we iterate 10 million times feeding dive previous seed into a sha256 function. Crash games read dive chain in a reverse order.</p>
+            <h4 class="fc-title">Generating a hash</h4>
+            <p class="fc-text">To achieve fair randomness, we create a sha256 hmac hash, created using dive server seed as dive secret, and client seed as dive value. We use 00000000000000000003c28c6e52ecb1a757cfa225d8cefd266a52a451d6e173 as dive client seed for divis chain.</p>
+          </div>
+          <!-- Seed -->
+          <div class="fair-contant fc-seed">
+            <div class="fc-s-game d-flex">
+              <div class="fcg-title">Games</div>
+              <div class="fc-dropdown">
+                <div class="fcd-select d-flex">Crash<img src="images/pop/down.png"></div>
+                <div class="fcd-box" style="display: none;">
+                  <div class="fcd-item active">Crash</div>
+                  <div class="fcd-item">Double</div>
+                  <div class="fcd-item">Dice</div>
+                  <div class="fcd-item">Keno</div>
+                  <div class="fcd-item">Limbo</div>
+                  <div class="fcd-item">Plinko</div>
+                  <div class="fcd-item">Mine</div>
+                  <div class="fcd-item">Crypto</div>
+                  <div class="fcd-item">Triple</div>
+                  <div class="fcd-item">Hilo</div>
+                  <div class="fcd-item">Coin</div>
+                  <div class="fcd-item">Tower</div>
+                </div>
+              </div>
+            </div>
+            <div class="pop-seed-tabs d-flex">
+              <div class="pop-st-active-img"><img src="images/pop/ty_xz.png"></div>
+              <div class="pop-st-item active">NEXT ISSUE</div>
+              <div class="pop-st-item">PREVIOUS ISSUE</div>
+            </div>
+            <!-- NEXT ISSUE -->
+            <div class="seed-contant sc-ni">
+              <div class="fair-label">Server Seed</div>
+              <div class="fair-value"><span>--</span></div>
+              <div class="fair-label">Server Seed Hash</div>
+              <div class="fair-value">
+                <span>172ee7cdef88c68970a0f8a4f3d1ad4daaa0782b00d12342f6090bb0d3affdbe</span>
+                <button class="seed-copy-btn"><img src="images/pop/copy.png"></button>
+              </div>
+              <div class="fair-label">Client Seed<button class="seed-update-btn"><img src="images/pop/update-seed.svg"></button></div>
+              <div class="fair-value">
+                <span>7330d19096efa44a52e90852ad648147</span>
+                <button class="seed-copy-btn"><img src="images/pop/copy.png"></button>
+              </div>
+              <div class="fair-label">Nonce</div>
+              <div class="fair-value"><span>1801</span></div>
+            </div>
+            <!-- PREVIOUS ISSUE -->
+            <div class="seed-contant sc-pi" style="display: none;">
+              <div class="fair-label">Server Seed</div>
+              <div class="fair-value"><span>--</span></div>
+              <div class="fair-label">Server Seed Hash</div>
+              <div class="fair-value">
+                <span>--</span>
+              </div>
+              <div class="fair-label">Client Seed</div>
+              <div class="fair-value">
+                <span>--</span>
+              </div>
+              <div class="fair-label">Nonce</div>
+              <div class="d-flex">
+                <div class="fair-value"><span>1801</span></div>
+                <button class="seed-v-btn">Validate</button>
+              </div>
+            </div>
+          </div>
+          <!-- Validate -->
+          <div class="fair-contant fc-validate" style="display: none;">
+            <div class="fc-s-game d-flex">
+              <div class="fcg-title">Games</div>
+              <div class="fc-dropdown">
+                <div class="fcd-select d-flex">Crash<img src="images/pop/down.png"></div>
+                <div class="fcd-box" style="display: none;">
+                  <div class="fcd-item active">Crash</div>
+                  <div class="fcd-item">Double</div>
+                  <div class="fcd-item">Dice</div>
+                  <div class="fcd-item">Keno</div>
+                  <div class="fcd-item">Limbo</div>
+                  <div class="fcd-item">Plinko</div>
+                  <div class="fcd-item">Mine</div>
+                  <div class="fcd-item">Crypto</div>
+                  <div class="fcd-item">Triple</div>
+                  <div class="fcd-item">Hilo</div>
+                  <div class="fcd-item">Coin</div>
+                  <div class="fcd-item">Tower</div>
+                </div>
+              </div>
+            </div>
+            <div class="fair-label">Seed</div>
+            <div class="fair-value"><span></span></div>
+            <div class="fair-label">Rounds</div>
+            <div class="fair-value"><span>5</span></div>
+            <div class="va-cp">Crash Point</div>
+            <div class="d-table va-table">
+              <div class="dt-header-group">
+                <div class="dt-cell va-th">Draw</div>
+                <div class="dt-cell va-th">Seed</div>
+              </div>
+              <div class="dt-row-group">
+                <div class="dt-row">
+                  <div class="dt-cell va-td"><div class="draw-box db-green">1.18</div></div>
+                  <div class="dt-cell va-td">
+                    <div class="d-flex vt-seed">
+                      <span>12</span>
+                      <button class="va-copy-btn"><img src="images/pop/copy.png"></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="dt-row">
+                  <div class="dt-cell va-td"><div class="draw-box db-blue">1.45</div></div>
+                  <div class="dt-cell va-td">
+                    <div class="d-flex vt-seed">
+                      <span>7330d19096efa44a52e90852ad648147</span>
+                      <button class="va-copy-btn"><img src="images/pop/copy.png"></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="dt-row">
+                  <div class="dt-cell va-td"><div class="draw-box db-green">1.18</div></div>
+                  <div class="dt-cell va-td">
+                    <div class="d-flex vt-seed">
+                      <span>12</span>
+                      <button class="va-copy-btn"><img src="images/pop/copy.png"></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="dt-row">
+                  <div class="dt-cell va-td"><div class="draw-box db-blue">1.45</div></div>
+                  <div class="dt-cell va-td">
+                    <div class="d-flex vt-seed">
+                      <span>7330d19096efa44a52e90852ad648147</span>
+                      <button class="va-copy-btn"><img src="images/pop/copy.png"></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="dt-row">
+                  <div class="dt-cell va-td"><div class="draw-box db-green">1.18</div></div>
+                  <div class="dt-cell va-td">
+                    <div class="d-flex vt-seed">
+                      <span>12</span>
+                      <button class="va-copy-btn"><img src="images/pop/copy.png"></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="dt-row">
+                  <div class="dt-cell va-td"><div class="draw-box db-blue">1.45</div></div>
+                  <div class="dt-cell va-td">
+                    <div class="d-flex vt-seed">
+                      <span>7330d19096efa44a52e90852ad648147</span>
+                      <button class="va-copy-btn"><img src="images/pop/copy.png"></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

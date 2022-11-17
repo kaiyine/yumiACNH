@@ -1,0 +1,795 @@
+@font-face {
+  font-family: blue-font;
+  src: url('../fonts/part2/BgFont.eot');
+  src: url('../fonts/part2/BgFont.eot?#iefix') format('embedded-opentype'),
+    url("../fonts/part2/BgFont.woff2") format("woff2"),
+    url("../fonts/part2/BgFont.woff") format("woff"),
+    url('../fonts/part2/BgFont.ttf') format('truetype');
+}
+
+body, html {
+  padding: 0;
+  margin: 0;
+  font-family: Microsoft YaHei, 'PingFangSC-Regular';
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+}
+
+button {
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.mla {
+  margin-left: auto;
+}
+
+.mcenter {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.t-l {
+  text-align: left;
+}
+
+.t-c {
+  text-align: center;
+}
+
+.t-r {
+  text-align: right;
+}
+
+img {
+  max-width: 100%;
+  display: inline-block;
+}
+
+.main {
+  margin: 0 auto;
+}
+
+/* header */
+header {
+  background: #131521;
+  height: 60px;
+  width: 100%;
+}
+
+.game-title {
+  color: #fff;
+  line-height: 60px;
+}
+
+.logo {
+  margin: 10px auto;
+  flex-grow: 1;
+  padding-right: 42px;
+}
+
+.logo-img {
+  height: 40px;
+}
+
+.s-lang {
+  width: 40px;
+}
+
+/* userbar */
+.user-m {
+  height: 40px;
+  padding: 5px 0;
+  background: #fff;
+}
+
+.user-n {
+  width: 50%;
+  color: #d48986;
+  line-height: 30px;
+  border-right: 1px solid #657682;
+  padding: 0 5px;
+}
+
+.user-w {
+  width: 50%;
+  color: #737476;
+  line-height: 30px;
+  padding: 0 5px;
+}
+
+.user-img {
+  height: 20px;
+  margin-right: 5px;
+  vertical-align: sub;
+}
+
+.user-w span {
+  text-decoration: underline;
+}
+
+/* game */
+.game {
+  background: url(../images/bj.png) center 46% no-repeat;
+  background-size: cover;
+  padding-bottom: 60px;
+}
+
+.gm-btn {
+  width: 40px;
+  padding: 2px 1px;
+}
+
+/* game-main */
+.game-plinko {
+  min-height: 240px;
+}
+
+.plinko-bl {
+  padding: 5px;
+}
+
+.pb-x {
+  background: url(../images/pl_kuang_hei.png) center no-repeat;
+  background-size: 100% 100%;
+  font-size: 7px;
+  padding: 7px 3px;
+  flex: 1 1 0%;
+  overflow: hidden;
+  text-align: center;
+}
+
+.pb-x span {
+  zoom: .7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pb-blue .pb-x {
+  color: #3eebf1;
+}
+
+.pb-green .pb-x {
+  color: #84e136;
+}
+
+.pb-red .pb-x {
+  color: #fb4251;
+}
+
+.pb-blue .pb-x.px-active {
+  background: url(../images/pl_zt_lan.png) center no-repeat;
+  background-size: 100% 100%;
+  color: #fff;
+}
+
+.pb-green .pb-x.px-active {
+  background: url(../images/pl_zt_lv.png) center no-repeat;
+  background-size: 100% 100%;
+  color: #fff;
+}
+
+.pb-red .pb-x.px-active {
+  background: url(../images/pl_zt_hong.png) center no-repeat;
+  background-size: 100% 100%;
+  color: #fff;
+}
+
+.pr-title {
+  font-family: 'blue-font';
+  color: #fff;
+  padding: 2px 5px;
+  text-shadow: 0 1px black;
+  font-size: 14px;
+}
+
+.pr-sz {
+  padding: 3px 8px 8px;
+  justify-content: space-around;
+}
+
+.psz-btn {
+  position: relative;
+  color: #fff;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+}
+
+.psz-btn span {
+  position: absolute;
+}
+
+/* bet-menu */
+.bet-menu {
+  background: url(../images/bet/ty_db.png) top center no-repeat;
+  background-size: 100% 100%;
+  margin-top: -60px;
+  padding: 24px 12px 0;
+  color: #fff;
+}
+
+.bm-menu {
+  background: #f8fdfe;
+  border-radius: 20px 20px 0 0;
+  padding: 0 3px 6px;
+  justify-content: center;
+}
+
+.plinko-bet {
+  flex-grow: 1;
+  padding: 10px 5px 0;
+}
+
+.pb-up {
+  border-radius: 10px;
+  border: 2px dashed #878aae;
+  text-align: center;
+}
+
+.pb-sz {
+  font-family: 'blue-font';
+  color: #fff;
+  text-align: center;
+  -webkit-text-stroke: 1px #000;
+  font-size: 36px;
+  padding-top: 5px;
+  background: transparent;
+  border: 0;
+  width: 90%;
+}
+
+.pb-sz:focus,
+.pb-sz:visited,
+.pb-sz:active {
+  border: 0;
+  outline: 0;
+}
+
+.ps-h {
+  color: #e0e0e0;
+}
+
+.pb-switch::before {
+  content: '';
+  display: block;
+  border-bottom: 2px solid #c8cccc;
+  width: 39%;
+  height: 1px;
+  margin: 0 auto;
+  position: absolute;
+  top: -3px;
+}
+
+.pb-switch {
+  display: flex;
+  padding: 10px 8px;
+  gap: 3px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.pbs-t {
+  font-family: 'blue-font';
+  -webkit-text-stroke: 1px #000;
+  color: #e0e0e0;
+  padding-right: 2px;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.pbs-s {
+  background: #E0E0E0;
+  border: 1px solid #649099;
+  position: relative;
+  width: 100%;
+  height: 20px;
+  border-radius: 50px;
+}
+
+.pbs-active {
+  background: #81E5EA;
+}
+
+.pbs-btn {
+  position: absolute;
+  left: -5px;
+  top: -5px;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+}
+
+.pbs-active .pbs-btn {
+  right: -5px;
+  left: inherit;
+}
+
+.pbc-btn {
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 0 7px;
+}
+
+.btn-c {
+  background: url(../images/bet/btn_c.png) center no-repeat;
+  background-size: 100% 100%;
+  font-family: 'blue-font';
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+}
+
+.pb-btn {
+  width: 100%;
+  font-family: 'blue-font';
+  -webkit-text-stroke: 1px #000;
+  color: #fff;
+  margin-top: 7px;
+  font-size: 18px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.pb-btn span {
+  position: absolute;
+}
+
+/* bet-table */
+.bet-table {
+  display: table;
+  width: 100%;
+  border-radius: 0 0 15px 15px;
+  overflow: hidden;
+  background: #24a5c1;
+  padding: 0 0 5px;
+}
+
+.bt-title {
+  background: url(../images/table/tiao.png) repeat-x;
+  background-size: auto 100%;
+  display: table-header-group;
+  font-family: 'blue-font';
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 0 #0e416a;
+  color: #fff;
+}
+
+.btt-th {
+  display: table-cell;
+  padding: 10px 15px;
+}
+
+.bt-row {
+  display: table-row-group;
+  font-family: 'blue-font';
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 0 #0e416a;
+  color: #fff;
+}
+
+.btt-td {
+  display: table-cell;
+  padding: 7px 15px;
+  vertical-align: middle;
+}
+
+.text-green {
+  color: #74ff00;
+}
+
+.text-red {
+  color: #ff0f23;
+}
+
+.text-blue {
+  color: #00f6ff;
+}
+
+.user-pc {
+  align-items: center;
+}
+
+.user-img-pc {
+  color: #fff;
+  padding-right: 20px;
+  display: flex;
+  align-items: center;
+}
+
+@media (min-width:540px) {
+
+  /* game-main */
+  .pb-x {
+    padding: 9px 3px;
+  }
+
+  /* bet-menu */
+  .plinko-bet {
+    max-width: 180px;
+  }
+
+  .pbs-s {
+    max-width: 60px;
+  }
+}
+
+@media (min-width:769px) {
+  .hide-in-pc {
+    display: none;
+  }
+
+  body {
+    background: url(../images/b5.png) top center no-repeat fixed;
+    background-size: cover;
+  }
+
+  .game-title {
+    font-size: 30px;
+  }
+
+  .contant {
+    max-width: 1024px;
+    margin: 20px auto;
+    width: 100%;
+  }
+
+  .blue-bg-pc {
+    background:
+      url(../images/blue-bg-pc/blue_bg_lb.png) left bottom no-repeat,
+      url(../images/blue-bg-pc/blue_bg_lt.png) left top no-repeat,
+      url(../images/blue-bg-pc/blue_bg_rt.png) right top no-repeat,
+      url(../images/blue-bg-pc/blue_bg_rb.png) right bottom no-repeat,
+      url(../images/blue-bg-pc/blue_bg_t.png) center top repeat-x,
+      url(../images/blue-bg-pc/blue_bg_l.png) left center repeat-y,
+      url(../images/blue-bg-pc/blue_bg_r.png) right center repeat-y,
+      url(../images/blue-bg-pc/blue_bg_b.png) center bottom repeat-x,
+      #2DC6D9;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.35);
+    border-radius: 21px;
+    padding: 20px;
+  }
+
+  .blue-bg-inner-pc {
+    background: #E3FDFB;
+    border-radius: 15px;
+    padding: 3px 10px;
+  }
+
+  /* game */
+  .pc-game-box {
+    display: flex;
+    margin-bottom: 10px;
+  }
+
+  .bet-game {
+    flex-grow: 1;
+  }
+
+  .game {
+    border-radius: 15px 15px 0 0;
+    padding-bottom: 0;
+    margin-bottom: 20px;
+  }
+
+  .game-menu {
+    padding: 12px 20px;
+  }
+
+  .gm-btn {
+    width: 47px;
+  }
+
+  .plinko-rows {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .pr-title {
+    padding: 0;
+    padding-left: 10px;
+    margin-top: -5px;
+  }
+
+  /* bet-menu */
+  .bet-menu {
+    background: transparent;
+    padding: 0;
+    margin: 0;
+  }
+
+  .pbs-t {
+    font-size: 16px;
+  }
+
+  .btn-c {
+    width: 44px;
+    height: 44px;
+    line-height: 44px;
+  }
+
+  .pb-btn {
+    font-size: 20px;
+  }
+
+  /* bet-table */
+  .bet-tabs {
+    position: relative;
+    width: 100%;
+    padding-bottom: 7px;
+    margin-top: -6px;
+    margin-bottom: 8px;
+  }
+
+  .bet-tab-bar {
+    position: absolute;
+    width: 80px;
+    height: 4px;
+    background: #fff;
+    border-radius: 10px;
+    left: 19px;
+    bottom: 0;
+  }
+
+  .bet-tab-btn {
+    color: #585858;
+    padding: 0 20px;
+    line-height: 30px;
+    transition: all .3s;
+    cursor: pointer;
+  }
+
+  .bet-tab-btn.active {
+    color: #fff;
+    font-size: 20px;
+  }
+
+  .bet-tab-btn:hover {
+    color: #fff;
+    font-size: 20px;
+  }
+
+  .bet-table {
+    background: transparent;
+  }
+
+  .bt-title, .bt-row {
+    background: transparent;
+    font-family: Microsoft YaHei, 'PingFangSC-Regular';
+    text-shadow: none;
+    color: #657682;
+  }
+
+  .btt-th {
+    border-bottom: 1px solid;
+  }
+
+  .btt-coins {
+    display: flex;
+    align-items: center;
+  }
+
+  .btt-coin {
+    width: 32px;
+    display: block;
+    margin-right: 5px;
+  }
+
+  .text-green {
+    color: #00c228;
+  }
+
+  .text-blue {
+    color: #005fbd;
+  }
+
+  /* side-menu */
+  .pc-side-menu {
+    max-width: 230px;
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .side-user {
+    padding: 10px 7px;
+    margin-bottom: 20px;
+  }
+
+  .side-user .user-n {
+    border: 0;
+    width: 100%;
+    padding-bottom: 5px;
+    font-size: 18px;
+  }
+
+  .side-user .user-w {
+    width: 100%;
+    color: #585858;
+    font-size: 18px;
+  }
+
+  .side-user .user-w span {
+    text-decoration: none;
+  }
+
+  .side-user .currency {
+    font-size: 13px;
+    margin-left: 6px;
+  }
+
+  .side-seed {
+    padding: 10px 9px;
+    flex-grow: 1;
+  }
+
+  .ss-title {
+    display: flex;
+    align-items: center;
+    border-bottom: 3px dashed #A0A0A0;
+    padding: 0 5px 10px;
+  }
+
+  .ss-title img {
+    width: 25px;
+    margin-right: 9px;
+  }
+
+  .ss-tabs {
+    position: relative;
+    align-items: center;
+    margin-top: 8px;
+  }
+
+  .st-active-bar {
+    position: absolute;
+    bottom: 4px;
+    width: 58px;
+    height: 2px;
+    left: 13px;
+    background: #585858;
+  }
+
+  .st-item {
+    color: #718593;
+    padding: 10px 0;
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .st-item.active {
+    font-size: 16px;
+    margin-right: 20px;
+    color: #585858;
+  }
+
+  .ss-label {
+    color: #585858;
+    font-size: 14px;
+    padding: 15px 0 10px;
+    display: flex;
+    align-items: center;
+  }
+
+  .ss-value {
+    background: #657682;
+    border-radius: 8px;
+    box-shadow: inset 0 0 7px rgb(0 0 0 / 50%);
+    padding: 0 10px;
+    margin-bottom: 7px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+  }
+
+  .ss-value span {
+    color: #9DBACE;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 88%;
+    font-size: 12px;
+  }
+
+  .ss-copy-btn {
+    padding: 0;
+  }
+
+  .ss-copy-btn img {
+    width: 15px;
+    vertical-align: middle;
+  }
+
+  .ss-update-btn {
+    padding-left: 5px;
+  }
+
+  .ss-update-btn img {
+    width: 20px;
+    vertical-align: middle;
+  }
+
+  .d-flex .ss-value {
+    width: 49%;
+  }
+
+  .ss-v-btn {
+    background: #2dc6d9;
+    box-shadow: inset 0 -3px 7px rgb(0 0 0 / 20%);
+    width: 49%;
+    margin-left: 2%;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+  }
+
+  .ss-v-btn:hover {
+    background: #39cfdd;
+  }
+}
+
+@media (min-width: 1023px) {
+
+  /* game-main */
+  .game-plinko {
+    min-height: 370px;
+  }
+
+  .pb-x {
+    padding: 7px 3px;
+  }
+
+  .pb-x span {
+    zoom: 1;
+  }
+
+  .pr-title {
+    padding: 2px 15px;
+    font-size: 18px;
+  }
+
+  .psz-btn {
+    font-size: 20px;
+  }
+
+  /* bet-menu */
+  .pb-up {
+    padding: 5px 0;
+  }
+
+  .pb-switch {
+    padding: 15px 8px;
+  }
+
+  .pbc-btn {
+    justify-content: space-evenly;
+  }
+}
+
+@media (max-width:768px) {
+  .hide-in-m {
+    display: none;
+  }
+}

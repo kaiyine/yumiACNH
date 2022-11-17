@@ -1,0 +1,976 @@
+@font-face {
+  font-family: blue-font;
+  src: url('../fonts/part2/BgFont.eot');
+  src: url('../fonts/part2/BgFont.eot?#iefix') format('embedded-opentype'),
+    url("../fonts/part2/BgFont.woff2") format("woff2"),
+    url("../fonts/part2/BgFont.woff") format("woff"),
+    url('../fonts/part2/BgFont.ttf') format('truetype');
+}
+
+body, html {
+  padding: 0;
+  margin: 0;
+  font-family: Microsoft YaHei, 'PingFangSC-Regular';
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+}
+
+button {
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.mla {
+  margin-left: auto;
+}
+
+.mcenter {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.t-l {
+  text-align: left;
+}
+
+.t-c {
+  text-align: center;
+}
+
+.t-r {
+  text-align: right;
+}
+
+img {
+  max-width: 100%;
+  display: inline-block;
+}
+
+.main {
+  margin: 0 auto;
+}
+
+/* header */
+header {
+  background: #131521;
+  height: 60px;
+  width: 100%;
+}
+
+.game-title {
+  color: #fff;
+  line-height: 60px;
+}
+
+.logo {
+  margin: 10px auto;
+  flex-grow: 1;
+  padding-right: 42px;
+}
+
+.logo-img {
+  height: 40px;
+}
+
+.s-lang {
+  width: 40px;
+}
+
+/* userbar */
+.user-m {
+  height: 40px;
+  padding: 5px 0;
+  background: #fff;
+}
+
+.user-n {
+  width: 50%;
+  color: #d48986;
+  line-height: 30px;
+  border-right: 1px solid #657682;
+  padding: 0 5px;
+}
+
+.user-w {
+  width: 50%;
+  color: #737476;
+  line-height: 30px;
+  padding: 0 5px;
+}
+
+.user-img {
+  height: 20px;
+  margin-right: 5px;
+  vertical-align: sub;
+}
+
+.user-w span {
+  text-decoration: underline;
+}
+
+/* game */
+.game {
+  background: url(../images/bj.png) center 46% no-repeat;
+  background-size: cover;
+  padding-bottom: 60px;
+}
+
+.gm-btn {
+  width: 40px;
+  padding: 2px 1px;
+}
+
+/* game-main */
+.game-coin {
+  margin: 0 5px;
+}
+
+.coin-bar {
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.coin-switch {
+  background: url(../images/Di_di_bai_.png) center no-repeat;
+  background-size: 100%;
+  background-size: 100% 100%;
+  align-self: center;
+  height: 44px;
+  padding: 2px 2px;
+  position: relative;
+  align-items: center;
+  margin-right: 5px;
+}
+
+.cs-btn-img {
+  position: absolute;
+  height: 91%;
+  height: calc(100% - 4px);
+  width: 50%;
+}
+
+.cs-btn {
+  position: relative;
+  color: #1f99b4;
+  width: 50%;
+  padding: 0 12px;
+  font-size: 15px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.cs-btn.active {
+  color: #fff;
+}
+
+.coin-list {
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+
+.c-list-img {
+  width: 54px;
+}
+
+.coin-main {
+  position: relative;
+  margin: 30px auto;
+  max-width: 460px;
+}
+
+.hilobg {
+  position: absolute;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.hb-l {
+  background: url(../images/Hi_al_l.png) right no-repeat;
+  background-size: 100% 100%;
+  width: 36%;
+  height: 100%;
+  flex-grow: 1;
+}
+
+.hb-r {
+  background: url(../images/Hi_al_r.png) left no-repeat;
+  background-size: 100% 100%;
+  width: 36%;
+  height: 100%;
+  flex-grow: 1;
+}
+
+.hb-c {
+  background: url(../images/Hi_al_c.png) repeat-x;
+  background-size: 100% 100%;
+  width: 30%;
+  height: 100%;
+  flex-grow: 1;
+}
+
+.coin-g {
+  position: relative;
+  z-index: 5;
+  padding: 10px 10px;
+  justify-content: center;
+  align-items: center;
+  min-height: 230px;
+}
+
+.cm-l, .cm-r {
+  font-family: 'blue-font';
+  color: #fff;
+  text-align: center;
+  -webkit-text-stroke: 0.8px #000;
+  text-shadow: 0 2px #000;
+  margin-top: -20px;
+  width: 30%;
+}
+
+.cm-up {
+  font-size: 24px;
+  padding: 5px 0;
+}
+
+.cm-dn {
+  font-size: 13px;
+  letter-spacing: -1px;
+}
+
+.cm-coin {
+  width: 26%;
+  text-align: center;
+  margin-top: -10px;
+}
+
+.coinimg {
+  max-width: 120px;
+  width: 100%;
+}
+
+/* bet-menu */
+.bet-menu {
+  background: url(../images/bet/ty_db.png) top center no-repeat;
+  background-size: 100% 100%;
+  margin-top: -60px;
+  padding: 24px 12px 0;
+  color: #fff;
+}
+
+.bet-risk {
+  justify-content: space-between;
+  margin-top: 3px;
+  align-items: center;
+}
+
+.br-sz {
+  width: 68%;
+  justify-content: space-around;
+}
+
+.br-btn {
+  background: url(../images/bet/Min_zt_f.png) center no-repeat;
+  background-size: 100%;
+  color: #fff;
+  padding: 16px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.brb-active {
+  background: url(../images/bet/Min_zt_fb.png) center no-repeat;
+  background-size: 100%;
+}
+
+.bd-select {
+  background: #f8fdfe;
+  width: 40%;
+  border-radius: 60px;
+  line-height: 36px;
+  padding: 0 13px;
+  height: 36px;
+  margin-left: 10px;
+}
+
+.bds-t {
+  color: #1f99b4;
+  padding-right: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.bds-i {
+  margin-left: auto;
+}
+
+.bds-img {
+  vertical-align: middle;
+  width: 18px;
+}
+
+.bd-menu {
+  position: absolute;
+  background: #657682;
+  border: 4px solid #b5c4cb;
+  border-radius: 10px;
+  right: 15px;
+  top: 32px;
+  z-index: 999;
+}
+
+.bdm {
+  line-height: 3;
+  color: #fff;
+  text-align: center;
+  padding: 0 25px;
+}
+
+.bdm.bdm-s {
+  background: #2baac9;
+}
+
+.bm-menu {
+  background: #f8fdfe;
+  border-radius: 18px 18px 0 0;
+  padding-bottom: 6px;
+}
+
+.bm-l {
+  padding: 15px 10px 7px;
+  flex-grow: 1;
+}
+
+.bm-c, .bm-l-pc {
+  padding: 15px 7px 7px 0;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.bm-r {
+  position: relative;
+  min-width: 130px;
+  padding: 12px 10px 4px;
+  display: none;
+}
+
+/* 遊戲模式切換至Multioly時顯示.bm-r */
+.bm-r.active {
+  display: block;
+}
+
+.ba {
+  background: #657682;
+  border-radius: 10px;
+  box-shadow: inset 0 0 7px rgb(0 0 0 / 50%);
+  padding: 5px 15px;
+  text-align: center;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ba-m {
+  font-family: 'blue-font';
+  text-shadow: 1px 1px 0 #000;
+  font-size: 18px;
+  padding-bottom: 10px;
+}
+
+.ba-text {
+  color: #a2a8a9;
+  border-top: 1px solid #a2a8a9;
+  font-size: 16px;
+  padding-top: 10px;
+}
+
+.btn-c {
+  background: url(../images/bet/btn_c.png) center no-repeat;
+  background-size: 100% 100%;
+  font-family: 'blue-font';
+  color: #fff;
+  width: 44px;
+  height: 44px;
+  line-height: 44px;
+}
+
+.bm-r::before {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 70%;
+  border-left: 2px dashed #657682;
+  top: 52%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.bet-btn {
+  background: url(../images/bet/bet.png) center no-repeat;
+  background-size: 100%;
+  font-family: 'blue-font';
+  -webkit-text-stroke: .5px #000;
+  text-shadow: 0 1px #000;
+  color: #fff;
+  font-size: 20px;
+  width: 100%;
+  height: 100%;
+  min-width: 40px;
+  max-width: 100px;
+  margin: 0 auto;
+  display: block;
+}
+
+.bb-pink {
+  background: url(../images/bet/bet-pink.png) center no-repeat;
+  background-size: 100% 100%;
+}
+
+.bb-gray {
+  background: url(../images/bet/bet-gray.png) center no-repeat;
+  background-size: 100% 100%;
+}
+
+.bms-menu, .cb-pc {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.coin-btn {
+  width: 50%;
+  padding: 14px 4px;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.cb-blue {
+  background: url(../images/bet/co_al_lan.png) center no-repeat;
+  background-size: 100% 100%;
+  color: #017c97;
+}
+
+.cb-gray {
+  background: url(../images/bet/co_al_hui.png) center no-repeat;
+  background-size: 100% 100%;
+  color: #fff;
+}
+
+/* 遊戲模式切換至Multioly時.coin-btn變灰 */
+.cb-disable {
+  background: url(../images/bet/co_al_ahui.png) center no-repeat;
+  background-size: 100% 100%;
+  color: #b6bcbd;
+}
+
+.cb-img {
+  width: 24px;
+}
+
+.cb-text {
+  text-align: center;
+  padding-right: 10px;
+}
+
+.cbt-up {
+  font-size: 15px;
+}
+
+.cbt-down {
+  font-size: 10px;
+}
+
+/* bet-tabel */
+.bet-table {
+  display: table;
+  width: 100%;
+  border-radius: 0 0 15px 15px;
+  overflow: hidden;
+  background: #24a5c1;
+  padding: 0 0 5px;
+}
+
+.bt-title {
+  background: url(../images/table/tiao.png) repeat-x;
+  background-size: auto 100%;
+  display: table-header-group;
+  font-family: 'blue-font';
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 0 #0e416a;
+  color: #fff;
+}
+
+.btt-th {
+  display: table-cell;
+  padding: 10px 15px;
+}
+
+.bt-row {
+  display: table-row-group;
+  font-family: 'blue-font';
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 0 #0e416a;
+  color: #fff;
+}
+
+.btt-td {
+  display: table-cell;
+  padding: 7px 15px;
+  vertical-align: middle;
+}
+
+.text-green {
+  color: #74ff00;
+}
+
+.text-red {
+  color: #ff0f23;
+}
+
+.user-pc {
+  align-items: center;
+}
+
+.user-img-pc {
+  color: #fff;
+  padding-right: 20px;
+  display: flex;
+  align-items: center;
+}
+
+@media (min-width:540px) {
+  .coin-g {
+    height: 300px;
+  }
+}
+
+@media (min-width:769px) {
+  .hide-in-pc {
+    display: none;
+  }
+
+  body {
+    background: url(../images/b5.png) top center no-repeat fixed;
+    background-size: cover;
+  }
+
+  .game-title {
+    font-size: 30px;
+  }
+
+  .contant {
+    max-width: 1024px;
+    margin: 20px auto;
+    width: 100%;
+  }
+
+  .blue-bg-pc {
+    background:
+      url(../images/blue-bg-pc/blue_bg_lb.png) left bottom no-repeat,
+      url(../images/blue-bg-pc/blue_bg_lt.png) left top no-repeat,
+      url(../images/blue-bg-pc/blue_bg_rt.png) right top no-repeat,
+      url(../images/blue-bg-pc/blue_bg_rb.png) right bottom no-repeat,
+      url(../images/blue-bg-pc/blue_bg_t.png) center top repeat-x,
+      url(../images/blue-bg-pc/blue_bg_l.png) left center repeat-y,
+      url(../images/blue-bg-pc/blue_bg_r.png) right center repeat-y,
+      url(../images/blue-bg-pc/blue_bg_b.png) center bottom repeat-x,
+      #2DC6D9;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.35);
+    border-radius: 21px;
+    padding: 20px;
+  }
+
+  .blue-bg-inner-pc {
+    background: #E3FDFB;
+    border-radius: 15px;
+    padding: 3px 10px;
+  }
+
+  /* game */
+  .pc-game-box {
+    display: flex;
+    margin-bottom: 10px;
+  }
+
+  .bet-game {
+    flex-grow: 1;
+  }
+
+  .game {
+    border-radius: 15px 15px 0 0;
+    padding-bottom: 0;
+    margin-bottom: 20px;
+  }
+
+  .game-menu {
+    padding: 12px 20px;
+  }
+
+  .gm-btn {
+    width: 47px;
+  }
+
+  /* game-main */
+  .game-coin {
+    margin: 0;
+    padding: 0 20px 20px;
+  }
+
+  .coin-switch {
+    height: 56px;
+    margin-right: 20px;
+  }
+
+  .cs-btn {
+    padding: 0 20px;
+    font-size: 20px;
+    font-weight: normal;
+  }
+
+  .c-list-img {
+    width: 60px;
+  }
+
+  .coin-main {
+    max-width: 500px;
+    height: 300px;
+    margin-bottom: 10px;
+  }
+
+  .hb-l {
+    width: 33%;
+  }
+
+  .hb-r {
+    width: 33%;
+  }
+
+  .hb-c {
+    width: 35%;
+  }
+
+  .coin-g {
+    height: 100%;
+  }
+
+  .cm-up {
+    font-size: 32px;
+  }
+
+  .cm-dn {
+    font-size: 16px;
+  }
+
+  .coinimg {
+    max-width: 150px;
+  }
+
+  /* bet-menu */
+  .bet-menu {
+    margin: 0;
+    background: transparent;
+    padding: 0;
+  }
+
+  .bm-menu {
+    padding: 0 4% 0 3%;
+  }
+
+  .bm-l-pc {
+    padding: 15px 0 7px 20px;
+  }
+
+  .bm-c {
+    padding-right: 20px;
+  }
+
+  .ba {
+    padding: 10px 30px;
+  }
+
+  .ba-m {
+    font-size: 24px;
+  }
+
+  .ba-text {
+    font-size: 18px;
+  }
+
+  .bms-menu {
+    max-width: inherit;
+  }
+
+  .cb-pc {
+    padding: 0 20px;
+    max-width: inherit;
+  }
+
+  .coin-btn {
+    height: 75px;
+    padding: 0;
+    justify-content: center;
+  }
+
+  .cb-img {
+    width: 34px;
+  }
+
+  .cb-text {
+    padding: 0 30px;
+  }
+
+  /* bet-table */
+  .bet-tabs {
+    position: relative;
+    width: 100%;
+    padding-bottom: 7px;
+    margin-top: -6px;
+    margin-bottom: 8px;
+  }
+
+  .bet-tab-bar {
+    position: absolute;
+    width: 80px;
+    height: 4px;
+    background: #fff;
+    border-radius: 10px;
+    left: 19px;
+    bottom: 0;
+  }
+
+  .bet-tab-btn {
+    color: #585858;
+    padding: 0 20px;
+    line-height: 30px;
+    transition: all .3s;
+    cursor: pointer;
+  }
+
+  .bet-tab-btn.active {
+    color: #fff;
+    font-size: 20px;
+  }
+
+  .bet-tab-btn:hover {
+    color: #fff;
+    font-size: 20px;
+  }
+
+  .bet-table {
+    background: transparent;
+  }
+
+  .bt-title, .bt-row {
+    background: transparent;
+    font-family: Microsoft YaHei, 'PingFangSC-Regular';
+    text-shadow: none;
+    color: #657682;
+  }
+
+  .btt-th {
+    border-bottom: 1px solid;
+  }
+
+  .btt-coins {
+    display: flex;
+    align-items: center;
+  }
+
+  .btt-coin {
+    width: 32px;
+    display: block;
+    margin-right: 5px;
+  }
+
+  .text-green {
+    color: #00c228;
+  }
+
+  /* side-menu */
+  .pc-side-menu {
+    max-width: 230px;
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .side-user {
+    padding: 10px 7px;
+    margin-bottom: 20px;
+  }
+
+  .side-user .user-n {
+    border: 0;
+    width: 100%;
+    padding-bottom: 5px;
+    font-size: 18px;
+  }
+
+  .side-user .user-w {
+    width: 100%;
+    color: #585858;
+    font-size: 18px;
+  }
+
+  .side-user .user-w span {
+    text-decoration: none;
+  }
+
+  .side-user .currency {
+    font-size: 13px;
+    margin-left: 6px;
+  }
+
+  .side-seed {
+    padding: 10px 9px;
+    flex-grow: 1;
+  }
+
+  .ss-title {
+    display: flex;
+    align-items: center;
+    border-bottom: 3px dashed #A0A0A0;
+    padding: 0 5px 10px;
+  }
+
+  .ss-title img {
+    width: 25px;
+    margin-right: 9px;
+  }
+
+  .ss-tabs {
+    position: relative;
+    align-items: center;
+    margin-top: 8px;
+  }
+
+  .st-active-bar {
+    position: absolute;
+    bottom: 4px;
+    width: 58px;
+    height: 2px;
+    left: 13px;
+    background: #585858;
+  }
+
+  .st-item {
+    color: #718593;
+    padding: 10px 0;
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .st-item.active {
+    font-size: 16px;
+    margin-right: 20px;
+    color: #585858;
+  }
+
+  .ss-label {
+    color: #585858;
+    font-size: 14px;
+    padding: 15px 0 10px;
+    display: flex;
+    align-items: center;
+  }
+
+  .ss-value {
+    background: #657682;
+    border-radius: 8px;
+    box-shadow: inset 0 0 7px rgb(0 0 0 / 50%);
+    padding: 0 10px;
+    margin-bottom: 7px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+  }
+
+  .ss-value span {
+    color: #9DBACE;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 88%;
+    font-size: 12px;
+  }
+
+  .ss-copy-btn {
+    padding: 0;
+  }
+
+  .ss-copy-btn img {
+    width: 15px;
+    vertical-align: middle;
+  }
+
+  .ss-update-btn {
+    padding-left: 5px;
+  }
+
+  .ss-update-btn img {
+    width: 20px;
+    vertical-align: middle;
+  }
+
+  .d-flex .ss-value {
+    width: 49%;
+  }
+
+  .ss-v-btn {
+    background: #2dc6d9;
+    box-shadow: inset 0 -3px 7px rgb(0 0 0 / 20%);
+    width: 49%;
+    margin-left: 2%;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+  }
+
+  .ss-v-btn:hover {
+    background: #39cfdd;
+  }
+}
+
+@media (min-width: 1023px) {
+  .num-l, .ltgt {
+    font-size: 100px;
+  }
+
+  .coin-main {
+    height: 340px;
+    max-width: 600px;
+  }
+
+  .cm-dn {
+    font-size: 19px;
+  }
+
+  .bm-menu {
+    padding: 0 60px 0 50px;
+  }
+}
+
+@media (max-width:768px) {
+  .hide-in-m {
+    display: none;
+  }
+}
